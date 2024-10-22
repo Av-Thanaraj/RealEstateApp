@@ -36,6 +36,7 @@ namespace RealEstate.Application.UseCases.Property.Queries.GetAll
                 return _mapper.Map<List<GetAllResponseDto>>(result);
             }
             catch (Exception ex) {
+                _logger.Error($"Get all properties exception fired: Exception {ex}");
                 throw new Exception();
             }
         }
