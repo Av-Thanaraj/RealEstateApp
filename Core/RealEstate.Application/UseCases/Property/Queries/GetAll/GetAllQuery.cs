@@ -18,13 +18,12 @@ namespace RealEstate.Application.UseCases.Property.Queries.GetAll
     {
         public IGenericRepository<RealEstate.Domain.Entities.Property> _genericRepository;
         public IMapper _mapper;
-       // private ILog _log;
+
         private static readonly ILog _logger = LogManager.GetLogger(typeof(GetAllQuery));
         public GetAllQueryHandler(IGenericRepository<RealEstate.Domain.Entities.Property> genericRepository, IMapper mapper)
         {
             _genericRepository = genericRepository;
             _mapper = mapper;
-           // _log = log;
         }
         public async Task<List<GetAllResponseDto>> Handle(GetAllQuery request, CancellationToken cancellationToken)
         {
