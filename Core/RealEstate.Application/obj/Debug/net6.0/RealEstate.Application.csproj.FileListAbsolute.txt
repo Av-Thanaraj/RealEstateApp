@@ -1,0 +1,15 @@
+D:\Study\RealEstate\Core\RealEstate.Application\bin\Debug\net6.0\RealEstate.Application.deps.json
+D:\Study\RealEstate\Core\RealEstate.Application\bin\Debug\net6.0\RealEstate.Application.dll
+D:\Study\RealEstate\Core\RealEstate.Application\bin\Debug\net6.0\RealEstate.Application.pdb
+D:\Study\RealEstate\Core\RealEstate.Application\bin\Debug\net6.0\RealEstate.Domain.dll
+D:\Study\RealEstate\Core\RealEstate.Application\bin\Debug\net6.0\RealEstate.Domain.pdb
+D:\Study\RealEstate\Core\RealEstate.Application\obj\Debug\net6.0\RealEstate.Application.csproj.AssemblyReference.cache
+D:\Study\RealEstate\Core\RealEstate.Application\obj\Debug\net6.0\RealEstate.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Study\RealEstate\Core\RealEstate.Application\obj\Debug\net6.0\RealEstate.Application.AssemblyInfoInputs.cache
+D:\Study\RealEstate\Core\RealEstate.Application\obj\Debug\net6.0\RealEstate.Application.AssemblyInfo.cs
+D:\Study\RealEstate\Core\RealEstate.Application\obj\Debug\net6.0\RealEstate.Application.csproj.CoreCompileInputs.cache
+D:\Study\RealEstate\Core\RealEstate.Application\obj\Debug\net6.0\RealEsta.ABD55878.Up2Date
+D:\Study\RealEstate\Core\RealEstate.Application\obj\Debug\net6.0\RealEstate.Application.dll
+D:\Study\RealEstate\Core\RealEstate.Application\obj\Debug\net6.0\refint\RealEstate.Application.dll
+D:\Study\RealEstate\Core\RealEstate.Application\obj\Debug\net6.0\RealEstate.Application.pdb
+D:\Study\RealEstate\Core\RealEstate.Application\obj\Debug\net6.0\ref\RealEstate.Application.dll

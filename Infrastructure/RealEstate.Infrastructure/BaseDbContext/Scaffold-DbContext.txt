@@ -1,0 +1,1 @@
+﻿dotnet ef dbcontext scaffold "Server=THANARAJ;Database=RealEstateDB;User ID=sa;Password=goldOX@5330;Trusted_Connection=True;Encrypt=False;" Microsoft.EntityFrameworkCore.SqlServer --output-dir Models --context MyDbContext --force
