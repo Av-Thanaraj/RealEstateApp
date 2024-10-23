@@ -1,6 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using RealEstate.Application.Mapper;
 using RealEstate.Application.UseCases.Property.Queries.GetAll;
+using RealEstate.Application.Utility;
+using RealEstate.Application.Utility.Concrete.Factory;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +18,7 @@ namespace RealEstate.Application
         {
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(GetAllQueryHandler).Assembly));
             services.AddAutoMapper(typeof(MappingProfile).Assembly);
+            services.AddTransient<IEmailSender>(provider => { return EmailSenderFactory.CreateEmailSender(Enum.EmailSenderType.SMTP); });
             return services;
         }
     }
