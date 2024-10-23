@@ -19,6 +19,7 @@ namespace RealEstate.Application
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(GetAllQueryHandler).Assembly));
             services.AddAutoMapper(typeof(MappingProfile).Assembly);
             services.AddTransient<IEmailSender>(provider => { return EmailSenderFactory.CreateEmailSender(Enum.EmailSenderType.SMTP); });
+
             return services;
         }
     }

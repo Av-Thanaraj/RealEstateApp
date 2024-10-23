@@ -11,6 +11,7 @@ using RealEstate.Infrastructure.Repositories;
 using log4net.Appender;
 using log4net.Core;
 using log4net.Layout;
+using RealEstate.API.Middleware;
 
 namespace RealEstate.API
 {
@@ -20,32 +21,13 @@ namespace RealEstate.API
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Configure Log4Net
-            var logRepository = LogManager.GetRepository(System.Reflection.Assembly.GetEntryAssembly()!);
-
-            // Read Log4Net configuration from appsettings.json
-            var log4NetConfig = builder.Configuration.GetSection("Log4Net");
-
-            // Set up the ConsoleAppender
-            var consoleAppender = new ConsoleAppender
+            builder.Services.AddLogging(loggingBuilder =>
             {
-                Layout = new PatternLayout
-                {
-                    ConversionPattern = log4NetConfig.GetSection("Appender:ConsoleAppender:Layout:ConversionPattern").Value
-                }
-            };
-            consoleAppender.ActivateOptions();
-
-            // Set the root logger
-            var rootLogger = logRepository.GetLogger("Root") as log4net.Repository.Hierarchy.Logger;
-            rootLogger.Level = Level.Debug; // Set level based on appsettings
-            rootLogger.AddAppender(consoleAppender);
-
-
+                loggingBuilder.AddLog4Net("log4net.config");
+            });
 
             builder.Services.AddApplication();
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
@@ -63,6 +45,7 @@ namespace RealEstate.API
                 app.UseSwaggerUI();
             }
 
+            app.UseMiddleware<RequestLoggingMiddleware>();
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
